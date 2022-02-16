@@ -18,6 +18,7 @@ issue_number_result = ""
 
 issue_list = []
 
+#Function to create an Epic
 def create_epic(summary, project_ID, issue_type, description = "No Description"):
   payload = json.dumps({
     "fields": {
@@ -47,6 +48,7 @@ def create_epic(summary, project_ID, issue_type, description = "No Description")
 
   return x1
 
+#Function to create a generic issue
 def create_issue(summary, project_ID, issue_type, parent_id, description = "No Description"):
   payload = json.dumps({
     "fields": {
@@ -58,7 +60,7 @@ def create_issue(summary, project_ID, issue_type, parent_id, description = "No D
         "id": str(project_ID)
       },
       "parent": {
-      "id": parent_id
+      "id": str(parent_id)
       },
       "description": description
     }
@@ -78,6 +80,14 @@ def create_issue(summary, project_ID, issue_type, parent_id, description = "No D
 
   return x1
 
+'''
+issue types:
+Epic: 10000
+Task: 10007
+Sub-task: 10008
+Bug: 10009
+Story: 10013
+'''
 
 def create_from_template(df, project_id):
   epics = []
@@ -110,3 +120,6 @@ def create_from_template(df, project_id):
 #print (create_from_template('data.csv'))
 
 #print(json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": ")))
+
+print(create_issue("prueba", 10104, 10009, 18853, description = "No Description"))
+
