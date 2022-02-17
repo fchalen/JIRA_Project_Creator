@@ -4,8 +4,8 @@ import json
 
 url = "https://iqualldev.atlassian.net/rest/api/2/project"
 
-#Insert TOKEN below, for more info go to https://id.atlassian.com/manage-profile/security/api-tokens
-auth = HTTPBasicAuth("francisco.chalen@iquall.net", "TOKEN")
+#Insert USER and TOKEN below, for more info go to https://id.atlassian.com/manage-profile/security/api-tokens
+auth = HTTPBasicAuth("USER", "TOKEN")
 
 headers = {
 "Accept": "application/json",
