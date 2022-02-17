@@ -14,6 +14,7 @@ Project info = "api/2/project/search"
 for more info look for GETs in https://developer.atlassian.com/cloud/jira/platform/rest/v2/api-group-projects/#api-rest-api-2-project-post
 '''
 
+#Insert TOKEN below, for more info go to https://id.atlassian.com/manage-profile/security/api-tokens
 url = "https://iqualldev.atlassian.net/rest/api/2/issue/createmeta"
 
 auth = HTTPBasicAuth("francisco.chalen@iquall.net", "TOKEN")
