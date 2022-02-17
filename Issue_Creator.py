@@ -5,7 +5,8 @@ import pandas as pd
 
 url = "https://iqualldev.atlassian.net/rest/api/2/issue"
 
-auth = HTTPBasicAuth("francisco.chalen@iquall.net", "39GnxVeP4l3kuWRBDq8463C3")
+#Insert TOKEN below, for more info go to https://id.atlassian.com/manage-profile/security/api-tokens
+auth = HTTPBasicAuth("francisco.chalen@iquall.net", "TOKEN")
 
 headers = {
    "Accept": "application/json",
